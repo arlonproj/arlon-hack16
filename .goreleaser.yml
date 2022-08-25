@@ -37,7 +37,7 @@ builds:
   skip: false
   no_unique_dist_dir: true
     
-  binary: '{{ .ProjectName }}_{{ .Os }}_v{{ .Version }}'
+  binary: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}_v{{ .Version }}'
 archives:
   # Use values used by `uname` (OS) and `uname -m` (architecture).
   - id: default
