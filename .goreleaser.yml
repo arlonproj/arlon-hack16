@@ -34,7 +34,6 @@ builds:
     - gomips: hardfloat
     - goamd64: v4
 
-  gobinary: "go1.17"
   skip: false
   no_unique_dist_dir: true
     
