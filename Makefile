@@ -65,6 +65,9 @@ test: manifests generate fmt vet ## Run tests.
 build: generate fmt vet ## Build manager binary.
 	go build -o bin/arlon main.go
 
+build-cli: fmt vet ## Build CLI binary.
+	go build -o bin/arlon main.go
+
 run: manifests generate fmt vet ## Run a controller from your host.
 	go run ./main.go
 
