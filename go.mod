@@ -22,6 +22,7 @@ require (
 )
 
 require (
+	github.com/argoproj/pkg v0.11.1-0.20211203175135-36c59d8fafe0
 	github.com/stretchr/testify v1.7.0
 	gotest.tools v2.2.0+incompatible
 	k8s.io/cli-runtime v0.22.12
@@ -45,7 +46,6 @@ require (
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/acomagu/bufpipe v1.0.3 // indirect
 	github.com/argoproj/gitops-engine v0.5.5 // indirect
-	github.com/argoproj/pkg v0.11.1-0.20211203175135-36c59d8fafe0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/bombsimon/logrusr v1.0.0 // indirect
