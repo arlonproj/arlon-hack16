@@ -1,2 +1,0 @@
-- name: GoReleaser Action
-  uses: goreleaser/goreleaser-action@v3.0.0
