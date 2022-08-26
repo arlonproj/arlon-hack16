@@ -31,6 +31,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
       -
+        name: Test controllers
+        uses: phalanks/envtest-action@v1.0.0-rc
+        with:
+          version: '0.20.2'
+          args: './controllers/...'
+      -
         name: Run package tests
         run: |
           go test -v ./pkg/...

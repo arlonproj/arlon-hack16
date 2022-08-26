@@ -7,12 +7,12 @@ before:
     - make vet
     # you may remove this if you don't need `go generate`
 builds:
-  - id: 'all'
+  - id: 'cli'
     env:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
+#      - windows # coming soon?
       - darwin
     goarch:
       - 'amd64'
@@ -33,7 +33,7 @@ builds:
     binary: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}_v{{ .Version }}'
 
 archives:
-  - id: 'all'
+  - id: 'cli'
     name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
     replacements:
       darwin: 'Darwin'
@@ -43,8 +43,6 @@ archives:
       amd64: 'x86_64'
 checksum:
   name_template: 'checksums.txt'
-snapshot:
-  name_template: "{{ incpatch .Version }}-next"
 changelog:
   sort: asc
   filters:
