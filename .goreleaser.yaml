@@ -3,7 +3,9 @@
 before:
   hooks:
     # You may remove this if you don't use go modules.
-    - make test
+    - make fmt
+    - make vet
+    - make generate
     # you may remove this if you don't need `go generate`
 builds:
   - id: 'all'
