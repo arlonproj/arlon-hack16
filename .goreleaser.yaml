@@ -1,0 +1,55 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+before:
+  hooks:
+    # You may remove this if you don't use go modules.
+    - make test
+    # you may remove this if you don't need `go generate`
+builds:
+  - id: 'all'
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - 'amd64'
+      - '386'
+      - 'arm64'
+    ignore:
+      - goos: 'darwin'
+        goarch: '386'
+      - goos: 'linux'
+        goarch: 'arm'
+        goarm: '7'
+      - goarm: 'mips64'
+      - gomips: 'hardfloat'
+      - goamd64: 'v4'
+    skip: false
+    no_unique_dist_dir: true
+    mod_timestamp: '{{ .CommitTimestamp }}'
+    binary: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}_v{{ .Version }}'
+
+archives:
+  - id: 'all'
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    replacements:
+      darwin: 'Darwin'
+      linux: 'Linux'
+      windows: 'Windows'
+      386: 'i386'
+      amd64: 'x86_64'
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - 'refactor'
+      - 'minor fix'
+      - 'cleanup'
