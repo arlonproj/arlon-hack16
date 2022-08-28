@@ -6,11 +6,17 @@ before:
     - make vet
 builds:
   - id: 'cli'
+    # You may remove this if you don't use go modules.
+    - make fmt
+    - make vet
+    # you may remove this if you don't need `go generate`
+builds:
+  - id: 'all'
     env:
       - CGO_ENABLED=0
     goos:
       - linux
-      #      - windows # coming soon?
+      - windows
       - darwin
     goarch:
       - 'amd64'
@@ -33,6 +39,8 @@ builds:
 archives:
   - id: 'cli'
     name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}_{{ .Version }}'
+  - id: 'all'
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
     replacements:
       darwin: 'Darwin'
       linux: 'Linux'
@@ -41,6 +49,9 @@ archives:
       amd64: 'x86_64'
 checksum:
   name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
 changelog:
   sort: asc
   filters:
