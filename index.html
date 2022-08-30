@@ -1,0 +1,940 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Arlon</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-arlon" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Arlon" class="md-header__button md-logo" aria-label="Arlon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Arlon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arlonproj/arlon" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    arlonproj/arlon
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Arlon" class="md-nav__button md-logo" aria-label="Arlon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Arlon
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arlonproj/arlon" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    arlonproj/arlon
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/" class="md-nav__link">
+        How to contribute to Arlon
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="help/" class="md-nav__link">
+        Help with MkDocs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/arlonproj/arlon/edit/main/docs/README.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="about-arlon">About Arlon</h1>
+<p><a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fplatform9%2Farlon?ref=badge_shield"><img alt="FOSSA Status" src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fplatform9%2Farlon.svg?type=shield" /></a>
+<a href="https://goreportcard.com/report/github.com/arlonproj/arlon"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/arlonproj/arlon" /></a>
+<a href="https://arlon.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/arlon/badge/?version=latest" /></a></p>
+<p>Arlon is a lifecycle management and configuration tool for Kubernetes clusters.
+It allows an administrator to compose, deploy and configure a large number of
+<em>workload clusters</em> in a structured, predictable way.
+Arlon takes advantage of multiple declarative cluster management API providers for the
+actual cluster orchestration: the first two supported API providers are
+Cluster API and Crossplane.
+Arlon uses ArgoCD as the underlying Kubernetes manifest deployment
+and enforcement engine.
+A workload cluster is composed from the following constructs:
+- <em>Cluster spec</em>: a description of the infrastructure and external settings of a cluster,
+e.g. Kubernetes version, cloud provider, cluster type, node instance type.
+- <em>Profile</em>: a grouping of configuration bundles which will be installed into the cluster
+- <em>Configuration bundle</em>: a unit of configuration which contains (or references) one or
+more Kubernetes manifests. A bundle can encapsulate anything that can be deployed onto a cluster:
+an RBAC ruleset, an add-on, an application, etc... </p>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#tutorial">Tutorial</a></li>
+</ul>
+<h1 id="architecture">Architecture</h1>
+<p><img alt="architecture" src="architecture_diagram.png" /></p>
+<p>Arlon is composed of a controller, a library, and a CLI that exposes the library's
+functions as commands. In the future, an API server may be built from
+the library as well. Arlon adds CRDs (custom resource definitions) for several
+custom resources such as ClusterRegistration and Profile.</p>
+<h2 id="management-cluster">Management cluster</h2>
+<p>The management cluster is a Kubernetes cluster hosting all the components
+needed by Arlon, including:
+- The ArgoCD server
+- The Arlon "database" (implemented as Kubernetes secrets and configmaps)
+- The Arlon controller
+- Cluster management API providers: Cluster API or Crossplane
+- Custom resources (CRs) that drive the involved providers and controllers
+- Custom resource definitions (CRDs) for all of the involved CRs</p>
+<p>The user is responsible for supplying the management cluster, and to have
+a access to a kubeconfig granting administrator permissions on the cluster.</p>
+<h2 id="controller">Controller</h2>
+<p>The Arlon controller observes and responds to changes in <code>clusterregistration</code>
+custom resources. The Arlon library creates a <code>clusterregistration</code> at the
+beginning of workload cluster creation,
+causing the controller to wait for the cluster's kubeconfig
+to become available, at which point it registers the cluster with ArgoCD to
+enable manifests described by bundles to be deployed to the cluster.</p>
+<h2 id="library">Library</h2>
+<p>The Arlon library is a Go module that contains the functions that communicate
+with the Management Cluster to manipulate the Arlon state (bundles, profiles, clusterspecs)
+and transforms them into git directory structures to drive ArgoCD's gitops engine. Initially, the
+library is exposed via a CLI utility. In the future, it may also be embodied
+into a server an exposed via a network API.</p>
+<h2 id="workspace-repository">Workspace repository</h2>
+<p>As mentioned earlier, Arlon creates and maintains directory structures in a git
+repository to drive ArgoCD <em>sync</em> operations.
+The user is responsible for supplying
+this <em>workspace repository</em> (and base paths) hosting those structures.
+Arlon relies on ArgoCD for repository registration, therefore the user should
+register the workspace registry in ArgoCD before referencing it from Arlon data types.</p>
+<h1 id="concepts">Concepts</h1>
+<h2 id="cluster-spec">Cluster spec</h2>
+<p>A cluster spec contains desired settings when creating a new cluster.
+They currently include:
+- API Provider: the cluster orchestration technology. Supported values are <code>CAPI</code> (Cluster API) and <code>xplane</code> (Crossplane)
+- Cloud Provider: the infrastructure cloud provider. The currently supported values is <code>aws</code>, with <code>gcp</code> and <code>azure</code> support coming later.
+- Type: the cluster type. Some API providers support more than one type. On <code>aws</code> cloud, Cluster API supports <code>kubeadm</code> and <code>eks</code>, whereas Crossplane only supports <code>eks</code>.
+- The (worker) node instance type
+- The initial (worker) node count
+- The Kubernetes version</p>
+<h2 id="configuration-bundle">Configuration bundle</h2>
+<p>A configuration bundle (or just "bundle") is grouping of data files that
+produce a set of Kubernetes manifests via a <em>tool</em>. This closely follows ArgoCD's
+definition of <em>tool types</em>. Consequently, the list of supported bundle
+types mirrors ArgoCD's supported set of manifest-producing tools.
+Each bundle is defined using a Kubernetes ConfigMap resource in the arlon namespace.</p>
+<h3 id="static-bundle">Static bundle</h3>
+<p>A static bundle embeds the manifest's YAML data itself ("static bundle").
+A cluster consuming a static bundle will always have a snapshot copy of
+the bundle at the time the cluster was created, and is not affected by subsequent
+changes to the bundle's manifest data.</p>
+<h3 id="dynamic-bundle">Dynamic bundle</h3>
+<p>A dynamic bunlde contains a reference to the manifest data stored in git.
+A dynamic bundle is distinguished
+by having these fields set to non-empty values:
+- git URL of the repo
+- Directory path within the repo</p>
+<p>The git URL must be registered in ArgoCD as a valid repository. The content of
+the specified directory can contain manifests in any of the <em>tool</em> formats supported
+by ArgoCD, including plain YAML, Helm and Kustomize.</p>
+<p>When the user updates a dynamic bundle in git, all clusters consuming that bundle
+(through a profile specified at cluster creation time) will acquire the change.</p>
+<h3 id="other-properties">Other properties</h3>
+<p>A bundle can also have a comma-separated list of tags, and a description.
+Tags can be useful for classifying bundles, for e.g. by type
+("addon", "cni", "rbac", "app").</p>
+<h2 id="profile">Profile</h2>
+<p>A profile expresses a desired configuration for a Kubernetes cluster.
+It is just a set of references to bundles (static, dynamic, or a combination).
+A profile can be static or dynamic.</p>
+<h3 id="static-profile">Static profile</h3>
+<p>When a cluster consumes a static profile
+at creation time, the set of bundles for the cluster is fixed at that time
+and does not change over time even when the static bundle is updated.
+(Note: the contents of some of those bundles referenced by the static
+profile may however change over time if they are dynamic).
+A static profile is stored as an item
+in the Arlon database (specifically, as a configmap in the Management Cluster).</p>
+<h3 id="dynamic-profile">Dynamic profile</h3>
+<p>A dynamic profile, on the other hand, has two components: the specification
+stored in the Arlon database, and a <em>compiled</em> component living in the workspace
+repository at a path specified by the user.
+(Note: this repository is usually the workspace repo, but it technically doesn't
+have to be, as long as it's a valid repo registered in ArgoCD)
+The compiled component is essentially a
+Helm chart of multiple ArgoCD app resources, each one pointing to a bundle.
+Arlon automatically creates and maintains the compiled component.
+When a user updates the composition of a dynamic profile, meaning redefines its
+bundle set, the Arlon library updates the compiled component to point to the
+bundles specified in the new set. Any cluster
+consuming that dynamic profile will be affected by the change, meaning it may lose
+or acquire new bundles in real time.</p>
+<h2 id="cluster">Cluster</h2>
+<p>An Arlon cluster, also known as workload cluster, is a Kubernetes cluster
+that Arlon creates and manages via a git directory structure store in
+the workspace repository.</p>
+<p>(Under construction)</p>
+<h1 id="installation">Installation</h1>
+<p>We plan to add a CLI command to simplify initial setup. Until then, please
+follow these manual instructions.</p>
+<h2 id="management-cluster_1">Management cluster</h2>
+<p>You can use any Kubernetes cluster that you have admin access to. Ensure:
+- <code>kubectl</code> is in your path
+- <code>KUBECONFIG</code> is pointing to the right file and the context set properly</p>
+<h2 id="argocd">ArgoCD</h2>
+<ul>
+<li>Follow steps 1-4 of the <a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">ArgoCD installation guide</a> to install ArgoCD onto your management cluster.
+After this step, you should be logged in as <code>admin</code> and a config file was created at <code>${HOME}/.config/argocd/config</code></li>
+<li>Create your workspace repository in your git provider if necessary, then register it.
+  Example: <code>argocd repo add https://github.com/myname/arlon_workspace --username myname --password secret</code>.</li>
+<li>Note: type <code>argocd repo add --help</code> to see all available options.</li>
+<li>For Arlon developers, this is not your fork of the Arlon source code repository, 
+       but a separate git repo where some artefacts like profiles created by Arlon will be stored. </li>
+<li>Highly recommended: <a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/webhook/">configure a webhook</a>
+  to immediately notify ArgoCD of changes to the repo. This will be especially useful
+  during the tutorial. Without a webhook, repo changes may take up to 3 minutes
+  to be detected, delaying cluster configuration updates. </li>
+<li><a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management/">Create a local user</a> named <code>arlon</code> with the <code>apiKey</code> capability.
+  This involves editing the <code>argocd-cm</code> ConfigMap using <code>kubectl</code>.</li>
+<li>Adjust the RBAC settings to grant admin permissions to the <code>arlon</code> user.
+  This involves editing the <code>argocd-rbac-cm</code> ConfigMap to add the entry
+  <code>g, arlon, role:admin</code> under the <code>policy.csv</code> section. Example:</li>
+</ul>
+<pre><code>apiVersion: v1
+data:
+  policy.csv: |
+    g, arlon, role:admin
+kind: ConfigMap
+[...]
+</code></pre>
+<ul>
+<li>Generate an account token: <code>argocd account generate-token --account arlon</code></li>
+<li>Make a temporary copy of the config file: <code>cp ${HOME}/.config/argocd/config /tmp/config</code> then
+  edit it to replace the value of <code>auth-token</code> with the token from
+  the previous step. Save changes. This file will be used to configure the Arlon
+  controller's ArgoCD credentials during the next steps.</li>
+</ul>
+<p>NOTE: <em>On some operating systems, including Linux, it's possible the source configuration
+file is located at <code>${HOME}/.argocd/config</code> instead. In any case, ensure that
+the destination file is named <code>/tmp/config</code>, it's important for the secret creation step below</em>.</p>
+<h2 id="arlon-controller">Arlon controller</h2>
+<ul>
+<li>Create the arlon namespace: <code>kubectl create ns arlon</code></li>
+<li>Create the ArgoCD credentials secret from the temporary config file:
+  <code>kubectl -n arlon create secret generic argocd-creds --from-file /tmp/config</code></li>
+<li>Delete the temporary config file</li>
+<li>Clone the arlon git repo and cd to its top directory</li>
+<li>Create the <code>clusterregistrations</code> CRD: <code>kubectl apply -f config/crd/bases/core.arlon.io_clusterregistrations.yaml</code></li>
+<li>Deploy the controller: <code>kubectl apply -f deploy/manifests/</code></li>
+<li>Ensure the controller eventually enters the Running state: <code>watch kubectl -n arlon get pod</code></li>
+</ul>
+<h2 id="arlon-cli">Arlon CLI</h2>
+<ul>
+<li>From the top directory, run <code>make build</code></li>
+<li>Optionally create a symlink from a directory
+  (e.g. <code>/usr/local/bin</code>) included in your ${PATH} to the <code>bin/arlon</code> binary
+  to make it easy to invoke the command.</li>
+</ul>
+<h2 id="cluster-orchestration-api-providers">Cluster orchestration API providers</h2>
+<p>Arlon currently supports Cluster API on AWS cloud. It also has experimental
+support for Crossplane on AWS.</p>
+<h3 id="cluster-api">Cluster API</h3>
+<p>Using the <a href="https://cluster-api.sigs.k8s.io/user/quick-start.html">Cluster API Quickstart Guide</a>
+as reference, complete these steps:
+- Install <code>clusterctl</code>
+- Initialize the management cluster.
+  In particular, follow instructions for your specific cloud provider (AWS in this example)
+  Ensure <code>clusterctl init</code> completes successfully and produces the expected output.</p>
+<h3 id="crossplane-experimental">Crossplane (experimental)</h3>
+<p>Using the <a href="https://github.com/upbound/platform-ref-aws#quick-start">Upbound AWS Reference Platform Quickstart Guide</a>
+as reference, complete these steps:
+- <a href="https://github.com/upbound/platform-ref-aws#installing-uxp-on-a-kubernetes-cluster">Install UXP on your management cluster</a>
+- <a href="https://github.com/upbound/platform-ref-aws#install-the-crossplane-kubectl-extension-for-convenience">Install Crossplane kubectl extension</a>
+- <a href="https://github.com/upbound/platform-ref-aws#install-the-platform-configuration">Install the platform configuration</a>
+- <a href="https://github.com/upbound/platform-ref-aws#configure-providers-in-your-platform">Configure the cloud provider credentials</a></p>
+<p>You do not need to go any further, but you're welcome to try the Network Fabric example.</p>
+<p>FYI: <em>we noticed the dozens/hundreds of CRDs that Crossplane installs in the management
+cluster can noticeably slow down kubectl, and you may see a warning that looks like</em>:</p>
+<pre><code>I0222 17:31:14.112689   27922 request.go:668] Waited for 1.046146023s due to client-side throttling, not priority and fairness, request: GET:https://AA61XXXXXXXXXXX.gr7.us-west-2.eks.amazonaws.com/apis/servicediscovery.aws.crossplane.io/v1alpha1?timeout=32s
+</code></pre>
+<h1 id="tutorial">Tutorial</h1>
+<p>This assumes that you plan to deploy workload clusters on AWS cloud, with
+Cluster API ("CAPI") as the cluster orchestration API provider.
+Also ensure you have set up a <a href="#workspace-repository">workspace repository</a>
+and it is registered as a git repo in ArgoCD. The tutorial will assume
+the existence of these environment variables:
+- <code>${ARLON_REPO}</code>: where the arlon repo is locally checked out
+- <code>${WORKSPACE_REPO}</code>: where the workspace repo is locally checked out
+- <code>${WORKSPACE_REPO_URL}</code>: the workspace repo's git URL. It typically looks 
+like <code>https://github.com/${username}/${reponame}.git</code></p>
+<p><em>Note: for the best experience, make sure your workspace repo is configured
+to send change notifications to ArgoCD via a webhook. See the Installation section for details.</em></p>
+<h2 id="cluster-specs">Cluster specs</h2>
+<p>We first create a few cluster specs with different combinations of API providers
+and cluster types (kubeadm vs EKS).
+One of the cluster specs is for an unconfigured API provider (Crossplane);
+this is for illustrative purposes, since we will not use it in this tutorial.</p>
+<pre><code>arlon clusterspec create capi-kubeadm-3node --api capi --cloud aws --type kubeadm --kubeversion v1.18.16 --nodecount 3 --nodetype t2.medium --tags devel,test --desc &quot;3 node kubeadm for dev/test&quot;
+arlon clusterspec create capi-eks --api capi --cloud aws --type eks --kubeversion v1.18.16 --nodecount 2 --nodetype t2.large --tags staging --desc &quot;2 node eks for general purpose&quot;
+arlon clusterspec create xplane-eks-3node --api xplane --cloud aws --type eks --kubeversion v1.18.16 --nodecount 4 --nodetype t2.small --tags experimental --desc &quot;4 node eks managed by crossplane&quot;
+</code></pre>
+<p>Ensure you can now list the cluster specs:</p>
+<pre><code>$ arlon clusterspec list
+NAME                APIPROV  CLOUDPROV  TYPE     KUBEVERSION  NODETYPE   NODECOUNT  TAGS          DESCRIPTION
+capi-eks            capi     aws        eks      v1.18.16     t2.large   2          staging       2 node eks for general purpose
+capi-kubeadm-3node  capi     aws        kubeadm  v1.18.16     t2.medium  3          devel,test    3 node kubeadm for dev/test
+xplane-eks-3node    xplane   aws        eks      v1.18.16     t2.small   4          experimental  4 node eks managed by crossplane
+</code></pre>
+<h2 id="bundles">Bundles</h2>
+<p>First create a static bundle containing raw YAML for the <code>guestbook</code>
+sample application from this example file:</p>
+<pre><code>cd ${ARLON_REPO}
+arlon bundle create guestbook-static --tags applications --desc &quot;guestbook app&quot; --from-file examples/bundles/guestbook.yaml
+</code></pre>
+<p>(<em>Note: the YAML is simply a concatenation of the files found in the
+<a href="https://github.com/argoproj/argocd-example-apps/tree/master/guestbook">ArgoCD Example Apps repo</a></em>)</p>
+<p>To illustrate the difference between static and dynamic bundles, we create
+a dynamic version of the same application, this time using a reference to a
+git directory containing the YAML. We could point it directly to the copy in the
+<a href="https://github.com/argoproj/argocd-example-apps/tree/master/guestbook">ArgoCD Example Apps repo</a>,
+but we'll want to make modifications to it, so we instead create a new directory
+to host our own copy in our workspace directory:</p>
+<pre><code>cd ${WORKSPACE_REPO}
+mkdir -p bundles/guestbook
+cp ${ARLON_REPO}/examples/bundles/guestbook.yaml bundles/guestbook
+git add bundles/guestbook
+git commit -m &quot;add guestbook&quot;
+git push origin main
+arlon bundle create guestbook-dynamic --tags applications --desc &quot;guestbook app (dynamic)&quot; --repo-url ${WORKSPACE_REPO_URL} --repo-path bundles/guestbook
+</code></pre>
+<p>Next, we create a static bundle for another "dummy" application,
+an Ubuntu pod (OS version: "Xenial") that does nothing but print the date-time
+in an infinite sleep loop:</p>
+<pre><code>cd ${ARLON_REPO}
+arlon bundle create xenial-static --tags applications --desc &quot;xenial pod&quot; --from-file examples/bundles/xenial.yaml
+</code></pre>
+<p>Finally, we create a bundle for the Calico CNI, which provides pod networking.
+Some types of clusters (e.g. kubeadm) require a CNI provider to be installed
+onto a newly created cluster, so encapsulating the provider as a bundle will
+give us a flexible way to install it. We download a known copy from the
+authoritative source and store it the workspace repo in order to create a
+dynamic bundle from it:</p>
+<pre><code>cd ${WORKSPACE_REPO}
+mkdir -p bundles/calico
+curl https://docs.projectcalico.org/v3.21/manifests/calico.yaml -O &gt; bundles/calico/calico.yaml
+git add bundles/calico
+git commit -m &quot;add calico&quot;
+git push origin main
+arlon bundle create calico --tags networking,cni --desc &quot;Calico CNI&quot; --repo-url https://github.com/argoproj/argocd-example-apps.git --repo-path bundles/guestbook
+</code></pre>
+<p>List your bundles to verify they were correctly entered:</p>
+<pre><code>$ arlon bundle list
+NAME               TYPE     TAGS                 REPO-URL                                             REPO-PATH              DESCRIPTION
+calico             dynamic  networking,cni       ${WORKSPACE_REPO_URL}                                bundles/calico         Calico CNI
+guestbook-dynamic  dynamic  applications         ${WORKSPACE_REPO_URL}                                bundles/guestbook      guestbook app (dynamic)
+guestbook-static   static   applications         (N/A)                                                (N/A)                  guestbook app
+xenial-static      static   applications         (N/A)                                                (N/A)                  ubuntu pod in infinite sleep loop
+</code></pre>
+<h2 id="profiles">Profiles</h2>
+<p>We can now create profiles to group bundles into useful, deployable sets.
+First, create a static profile containing bundles xenial-static and guestbook-static:</p>
+<pre><code>arlon profile create static-1 --bundles guestbook-static,xenial --desc &quot;static profile 1&quot; --tags examples
+</code></pre>
+<p>Secondly, create a dynamic version of the same profile. We'll store the compiled
+form of the profile in the <code>profiles/dynamic-1</code> directory of the workspace repo. We don't create
+it manually; instead, the arlon CLI will create it for us, and it will push
+the change to git:</p>
+<pre><code>arlon profile create dynamic-1 --repo-url ${WORKSPACE_REPO_URL} --repo-base-path profiles --bundles guestbook-static,xenial --desc &quot;dynamic test 1&quot; --tags examples
+</code></pre>
+<p><em>Note: the <code>--repo-base-path profiles</code> option tells arlon to create the profile
+under a base directory <code>profiles/</code> (to be created if it doesn't exist). That
+is in fact the default value of that option, so it is not necessary to specify
+it in this case.</em></p>
+<p>To verify that the compiled profile was created correctly:</p>
+<pre><code>$ cd ${WORKSPACE_REPO}
+$ git pull
+$ tree profiles
+profiles
+├── dynamic-1
+│   ├── mgmt
+│   │   ├── Chart.yaml
+│   │   └── templates
+│   │       ├── guestbook-dynamic.yaml
+│   │       ├── placeholder_configmap.yaml
+│   │       └── xenial.yaml
+│   └── workload
+│       └── xenial
+│           └── xenial.yaml
+[...]
+</code></pre>
+<p>Since <code>xenial</code> is a static bundle, a copy of its YAML was stored in <code>workload/xenial/xenial.yaml</code>.
+This is not done for <code>guestbook-dynamic</code> because it is dynamic.</p>
+<p>Finally, we create another variant of the same profile, with the only difference
+being the addition of Calico bundle. It'll be used on clusters that need a CNI provider:</p>
+<pre><code>arlon profile create dynamic-2-calico --repo-url ${WORKSPACE_REPO_URL} --repo-base-path profiles --bundles calico,guestbook-dynamic,xenial --desc &quot;dynamic test 1&quot; --tags examples
+</code></pre>
+<p>Listing the profiles should show:</p>
+<pre><code>$ arlon profile list
+NAME              TYPE     BUNDLES                          REPO-URL               REPO-PATH                  TAGS         DESCRIPTION
+dynamic-1         dynamic  guestbook-static,xenial          ${WORKSPACE_REPO_URL}  profiles/dynamic-1         examples     dynamic test 1
+dynamic-2-calico  dynamic  calico,guestbook-static,xenial   ${WORKSPACE_REPO_URL}  profiles/dynamic-2-calico  examples     dynamic test 1
+static-1          static   guestbook-dynamic,xenial         (N/A)                  (N/A)                      examples     static profile 1
+</code></pre>
+<h2 id="clusters">Clusters</h2>
+<p>We are now ready to deploy our first cluster. It will be of type EKS. Since
+EKS clusters come configured with pod networking out of the box, we choose
+a profile that does not include Calico: <code>dynamic-1</code>.
+When deploying a cluster, arlon creates in git a Helm chart containing
+the manifests for creating and bootstrapping the cluster.
+Arlon then creates an ArgoCD App referencing the chart, thereby relying
+on ArgoCD to orchestrate the whole process of deploying and configuring the cluster.
+The arlon <code>deploy</code> command
+accepts a git URL and path for this git location. Any git repo can be used (so long
+as it's registered with ArgoCD), but we'll use the workspace cluster for
+convenience:</p>
+<pre><code>arlon cluster deploy --repo-url ${WORKSPACE_REPO_URL} --cluster-name eks-1 --profile dynamic-1 --cluster-spec capi-eks
+</code></pre>
+<p>The git directory hosting the cluster Helm chart is created as a subdirectory
+of a base path in the repo. The base path can be specified with <code>--base-path</code>, but
+we'll leave it unspecified in order to use the default value of <code>clusters</code>.
+Consequently, this example produces the directory <code>clusters/eks-1/</code> in the repo.
+To verify its presence:</p>
+<pre><code>$ cd ${WORKSPACE_REPO}
+$ git pull
+$ tree clusters/eks-1
+clusters/eks-1
+└── mgmt
+    ├── charts
+    │   ├── capi-aws-eks
+    │   │   ├── Chart.yaml
+    │   │   └── templates
+    │   │       └── cluster.yaml
+    │   ├── capi-aws-kubeadm
+    │   │   ├── Chart.yaml
+    │   │   └── templates
+    │   │       └── cluster.yaml
+    │   └── xplane-aws-eks
+    │       ├── Chart.yaml
+    │       └── templates
+    │           ├── cluster.yaml
+    │           └── network.yaml
+    ├── Chart.yaml
+    ├── templates
+    │   ├── clusterregistration.yaml
+    │   ├── ns.yaml
+    │   ├── profile.yaml
+    │   └── rbac.yaml
+    └── values.yaml
+</code></pre>
+<p>The chart contains several subcharts under <code>mgmt/charts/</code>,
+one for each supported type of cluster. Only one of them will be enabled,
+in this case <code>capi-aws-eks</code> (Cluster API on AWS with type EKS).</p>
+<p>At this point, the cluster is provisioning and can be seen in arlon and AWS EKS:</p>
+<pre><code>$ arlon cluster list
+NAME       CLUSTERSPEC  PROFILE  
+eks-1      capi-eks     dynamic-1
+
+$ aws eks list-clusters
+{
+    &quot;clusters&quot;: [
+        &quot;eks-1_eks-1-control-plane&quot;,
+    ]
+}
+</code></pre>
+<p>Eventually, it will also be seen as a registered cluster in argocd, but this
+won't be visible for a while, because the cluster is not registered until
+its control plane (the Kubernetes API) is ready:</p>
+<pre><code>$ argocd cluster list
+SERVER                                                                    NAME        VERSION  STATUS      MESSAGE
+https://9F07DC211252C6F7686F90FA5B8B8447.gr7.us-west-2.eks.amazonaws.com  eks-1       1.18+    Successful  
+https://kubernetes.default.svc                                            in-cluster  1.20+    Successful  
+</code></pre>
+<p>To monitor the progress of the cluster deployment, check the status of
+the ArgoCD app of the same name:</p>
+<pre><code>$ argocd app list
+NAME                         CLUSTER                         NAMESPACE  PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                   PATH                                          TARGET
+eks-1                        https://kubernetes.default.svc  default    default  Synced  Healthy  Auto-Prune  &lt;none&gt;      ${WORKSPACE_REPO_URL}  clusters/eks-1/mgmt                           main
+eks-1-guestbook-static                                       default    default  Synced  Healthy  Auto-Prune  &lt;none&gt;      ${WORKSPACE_REPO_URL}  profiles/dynamic-1/workload/guestbook-static  HEAD
+eks-1-profile-dynamic-1      https://kubernetes.default.svc  argocd     default  Synced  Healthy  Auto-Prune  &lt;none&gt;      ${WORKSPACE_REPO_URL}  profiles/dynamic-1/mgmt                       HEAD
+eks-1-xenial                                                 default    default  Synced  Healthy  Auto-Prune  &lt;none&gt;      ${WORKSPACE_REPO_URL}  profiles/dynamic-1/workload/xenial            HEAD
+</code></pre>
+<p>The top-level app <code>eks-1</code> is the root of all argocd apps that make up the
+cluster and its configuration contents. The next level app <code>eks-1-profile-dynamic-1</code>
+represents the profile, and its children apps <code>eks-1-guestbook-static</code> and <code>eks-1-xenial</code>
+correspond to the bundles.</p>
+<p><em>Note: The overall tree-like organization of the apps and their health status
+can be visually observed in the ArgoCD web user interface.</em></p>
+<p>The cluster is fully deployed once those apps are all <code>Synced</code> and <code>Healthy</code>.
+An EKS cluster typically takes 10-15 minutes to finish deploying.</p>
+<h2 id="behavioral-differences-between-static-and-dynamic-bundles-profiles">Behavioral differences between static and dynamic bundles &amp; profiles</h2>
+<p><strong>Static bundle</strong></p>
+<p>A change to a static bundle does not affect existing clusters using that bundle
+(through a profile). To illustrate this, bring up the ArgoCD UI and
+open the detailed view of the <code>eks-1-guestbook-static</code> application,
+which applies the <code>guestbook-static</code> bundle to the <code>eks-1</code> cluster.
+Note that there is only one <code>guestbook-ui</code> pod.</p>
+<p>Next, update the <code>guestbook-static</code> bundle to have 3 replicas of the pod:</p>
+<pre><code>arlon bundle update guestbook-static --from-file examples/bundles/guestbook-3replicas.yaml
+</code></pre>
+<p>Note that the UI continues to show one pod. Only new clusters consuming
+this bundle will have the 3 replicas.</p>
+<p><strong>Dynamic profile</strong></p>
+<p>Before discussing dynamic bundles, we take a small detour to introduce
+dynamic profiles, since this will help understand the relationship between
+profiles and bundles.
+To illustrate how a profile can be updated, we remove <code>guestbook-static</code> bundle
+from <code>dynamic-1</code> by specifying a new bundle set:</p>
+<pre><code>arlon profile update dynamic-1 --bundles xenial
+</code></pre>
+<p>Since the old bundle set was <code>guestbook-static,xenial</code>, that command resulted
+in the removal of <code>guestbook-static</code> from the profile.
+In the UI, observe the <code>eks-1-profile-dynamic-1</code> app going through Sync
+and Progressing phases, eventually reaching the healthy (green) state.
+And most importantly, the <code>eks-1-guestbook-static</code> app is gone. The reason
+this real-time change to the cluster was possible is that the <code>dynamic-1</code>
+profile is dynamic, meaning any change to its composition results in arlon
+updating the corresponding compiled Helm chart in git. ArgoCD detects this
+git change and propagates the app / configuration updates to the cluster.</p>
+<p>If the profile were of the static type, a change in its composition (the
+set of bundles) would <em>not</em> have affected existing clusters using that profile.
+It would only affect new clusters created with the profile.</p>
+<p><strong>Dynamic bundle</strong></p>
+<p>To illustrate the defining characteristic of a dynamic bundle, we first add
+<code>guestbook-dynamic</code> to <code>dynamic-1</code>:</p>
+<pre><code>arlon profile update dynamic-1 --bundles xenial,guestbook-dynamic
+</code></pre>
+<p>Observe the re-appearance of the guestbook application, which is managed
+by the <code>eks-1-guestbook-dynamic</code> ArgoCD app. A detailed view of the app
+shows 1 guestbook-ui pod. Remember that a dynamic bundle's
+manifest content is stored in git. Use these commands to change the number
+of pod replicas to 3:</p>
+<pre><code>cd ${WORKSPACE_REPO}
+git pull # to get all latest changes pushed by arlon
+vim bundles/guestbook/guestbook.yaml # edit to change deployment's replicas to 3
+git commit -am &quot;increase guestbook replicas&quot;
+git push origin main
+</code></pre>
+<p>Observe the number of pods increasing to 3 in the UI. Any existing cluster
+consuming this dynamic bundle will be updated similarly, regardless of whether
+the bundle is consumed via a dynamic or static profile.</p>
+<p><strong>Static profile</strong></p>
+<p>Finally, a profile can be static. It means that it has no corresponding
+"compiled" component (a Helm chart) living in git. When a cluster is
+deployed using a static profile, the set of bundles (whether static or
+dynamic) it receives is determined by the bundle set defined by the profile at deployment
+time, and will not change in the future, even if the profile is updated to
+a new set at a later time.</p>
+<h2 id="cluster-updates-and-upgrades">Cluster updates and upgrades</h2>
+<p>The <code>arlon cluster update [flags]</code> command allows you to make changes to
+an existing cluster. The clusterspec, profile, or both can change, provided
+that the following rules and guidelines are followed.</p>
+<h3 id="clusterspec">Clusterspec</h3>
+<p>There are two scenarios. In the first, the clusterspec name associated with the
+cluster hasn't changed, meaning the cluster is using the same clusterspec.
+However, some properties of the clusterspec's properties have changed since
+the cluster was deployed or last updated, using <code>arlon clusterspec update</code>
+Arlon supports updating the cluster
+to use updated values of the following properties:
+- kubernetesVersion
+- nodeCount
+- nodeType</p>
+<p><em>Note: Updating the cluster is not allowed if other properties of its clusterspec
+(e.g. cluster orchestration API provider, cloud, cluster type, region, pod CIDR block, etc...)
+have changed, however new clusters can always be created/deployed using the
+changed clusterspec.</em></p>
+<p>A change in <code>kubernetesVersion</code> will result in a cluster upgrade/downgrade.
+There are some restrictions and caveats you need to be aware of:
+- The specific Kubernetes version must be supported by the particular 
+  implementation and release of the underlying cluster orchestration API provider,
+  cloud, and cluster type.
+- In general, the control plane will be upgraded first
+- Existing nodes are not typically not upgraded to the new Kubernetes version.
+  Only new nodes (added as part of manual <code>nodeCount</code> change or autoscaling)</p>
+<p>In the second scenario, as part of an update operation, you may choose to
+associate the cluster with a different clusterspec altogether. 
+The rule governing the allowed property changes remains the same: the cluster
+update operation is allowed if, relative to the previously associated clusterspec, 
+the new clusterspec's properties differ only in the values listed above.</p>
+<h3 id="profile_1">Profile</h3>
+<p>You can specify a completely different profile when updating a cluster.
+All bundles previously used will be removed from the cluster, and new ones
+specified by the new profile will be applied. This is regardless of whether
+the old and new profiles are static or dynamic.</p>
+<h3 id="examples">Examples</h3>
+<p>These sequence of commands updates a clusterspec to a newer Kubernetes version
+and a higher node count, then upgrades the cluster to the newer specifications:</p>
+<pre><code>arlon clusterspec update capi-eks --nodecount 3 --kubeversion v1.19.15
+arlon cluster update eks-1
+</code></pre>
+<p>Note that the 2nd command didn't need any flags because the clusterspec used
+is the same as before.</p>
+<p>This example updates a cluster to use a new profile <code>my-new-profile</code>:</p>
+<pre><code>arlon cluster update eks-1 --profile my-new-profile
+</code></pre>
+<h1 id="implementation-details">Implementation details</h1>
+<h2 id="cluster-chart">Cluster chart</h2>
+<p>The cluster chart is a Helm chart that creates (and optionally applies) the
+manifests necessary to create a cluster and deploy desired configurations
+and applications to it. When a user uses Arlon to create and configure a cluster,
+he or she specifies a profile. The profile's cluster specification, bundle
+list and other settings are used to generate values for the chart, and the
+chart is deployed as a Helm release into the <em>arlon</em> namespace in the
+management cluster.</p>
+<p>Here is a summary of the kinds of resources generated and deployed by the chart:
+- A unique namespace with a name based on the cluster's name. All subsequent
+  resources below are created inside of that namespace.
+- The stack-specific resources to create the cluster (for e.g. Cluster API resources)
+- A <code>clusterregistration</code> to automatically register the cluster with ArgoCD
+- A GitRepoDir to automatically create a git repo and/or directory to host a copy
+  of the expanded bundles. Every bundle referenced by the profile is
+  copied/unpacked into its own subdirectory.
+- One ArgoCD Application resource for each bundle.</p>
+<h2 id="license">License</h2>
+<p><a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fplatform9%2Farlon?ref=badge_large"><img alt="FOSSA Status" src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fplatform9%2Farlon.svg?type=large" /></a></p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="design/" class="md-footer__link md-footer__link--next" aria-label="Next: Design" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Design
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

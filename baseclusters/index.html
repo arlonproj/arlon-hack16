@@ -1,0 +1,650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Next-gen Cluster Provisioning using Base Clusters - Arlon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#next-gen-cluster-provisioning-using-base-clusters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Arlon" class="md-header__button md-logo" aria-label="Arlon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Arlon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Next-gen Cluster Provisioning using Base Clusters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/arlonproj/arlon" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    arlonproj/arlon
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Arlon" class="md-nav__button md-logo" aria-label="Arlon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Arlon
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/arlonproj/arlon" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    arlonproj/arlon
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/" class="md-nav__link">
+        Design
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        How to contribute to Arlon
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../help/" class="md-nav__link">
+        Help with MkDocs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    Goals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile-support" class="md-nav__link">
+    Profile support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-diagram" class="md-nav__link">
+    Architecture diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-cluster" class="md-nav__link">
+    Base Cluster
+  </a>
+  
+    <nav class="md-nav" aria-label="Base Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workload-clusters" class="md-nav__link">
+    Workload clusters
+  </a>
+  
+    <nav class="md-nav" aria-label="Workload clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    Creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composition" class="md-nav__link">
+    Composition
+  </a>
+  
+    <nav class="md-nav" aria-label="Composition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster-app" class="md-nav__link">
+    Cluster app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arlon-app" class="md-nav__link">
+    Arlon app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-app-optional" class="md-nav__link">
+    Profile app (optional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teardown" class="md-nav__link">
+    Teardown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-semantics" class="md-nav__link">
+    Update Semantics
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Semantics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unsupported-changes" class="md-nav__link">
+    Unsupported changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/arlonproj/arlon/edit/main/docs/baseclusters.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="next-gen-cluster-provisioning-using-base-clusters">Next-gen Cluster Provisioning using Base Clusters</h1>
+<p>This proposal describes a new way of provisioning workload clusters in Arlon.
+The most significant change is the <em>Base Cluster</em> construct, which replaces the current ClusterSpec.
+To distinguish them from current generation
+clusters, the ones deployed from a base cluster are called next-gen clusters.</p>
+<h2 id="goals">Goals</h2>
+<ul>
+<li>Allow users to deploy arbitrarily complex clusters using the full Cluster API feature set.</li>
+<li>Fully declarative and gitops compatible: a cluster deployment should be composed of one or more
+self-sufficient manifests that the user can choose to either apply directly (via kubectl) or store in
+git for later-stage deployment by a gitops tool (mainly ArgoCD).</li>
+<li>Support Linked Mode update: an update to the the base cluster should
+automatically propagate to all workload clusters deployed from it.</li>
+</ul>
+<h2 id="profile-support">Profile support</h2>
+<ul>
+<li>While profiles are also being re-architected, the first implementation of next-gen clusters
+fully integrates with current-generation profiles, which are expressed as Profile custom resources
+and compiled into a set of intermediate files in a git repository.</li>
+<li>Profiles are optional, and a next-gen cluster can be created without a profile.
+One can be attached later.</li>
+</ul>
+<h2 id="architecture-diagram">Architecture diagram</h2>
+<p>This example shows a base cluster named <code>capi-quickstart</code> used to deploy two workload
+clusters <code>cluster-a</code> and <code>cluster-b</code>. Additionally, <code>cluster-a</code> is given profile <code>xxx</code>,
+while <code>cluster-b</code> is given profile <code>yyy</code>.</p>
+<p><img alt="architecture" src="../arlon_gen2.png" /></p>
+<h2 id="base-cluster">Base Cluster</h2>
+<p>A base cluster serves as a base for creating new workload clusters. The workload clusters
+are all exact copies of the base cluster, meaning that they acquire all unmodified resources of the
+base cluster, except for:
+- resource names, which are prefixed during the cluster creation process to make them unique to avoid conflicts
+- the namespace, which is set to a new namespace unique to the workload cluster</p>
+<h3 id="preparation">Preparation</h3>
+<ul>
+<li>To create a base cluster, a user first creates a single YAML file containing the desired Cluster API
+cluster and all related resources (e.g. MachineDeployments, etc...), using whatever tool the user
+chooses (e.g. <code>clusterctl generate cluster</code>). The user is responsible for the correctness of the file
+and resources within. Arlon will not check for errors. For example, the specified Kubernetes version
+must be supported by the Cluster API providers currently installed in the management cluster. If it
+isn't, resulting clusters will fail and enter a perpetual OutOfSync state.</li>
+<li>The user then commits and pushes the manifest file to a dedicated directory in a git repository.
+The name of the cluster resource does not matter, it will be used as a suffix during workload
+cluster creation. The directory should be unique to the file, and not contain any other files.</li>
+<li>If not already registered, the git repository should also be registered in ArgoCD with
+the proper credentials for read/write access.</li>
+</ul>
+<p>To check whether the git directory is a compliant Arlon base cluster,
+the user runs:</p>
+<pre><code>arlon basecluster validategit --repo-url &lt;repoUrl&gt; --repo-path &lt;pathToDirectory&gt; [--repo-revision revision]  
+</code></pre>
+<p><em>Note: if --repo-revision is not specified, it defaults to main.</em></p>
+<p>The command produces an error the first time because the git directory has not yet been "prepped".
+To "prep" the directory to become a compliant Arlon base cluster, the user runs:</p>
+<pre><code>arlon basecluster preparegit --repo-url &lt;repoUrl&gt; --repo-path &lt;pathToDirectory&gt; [--repo-revision revision]  
+</code></pre>
+<p>This pushes a commit to the repo with these changes:
+- A <code>kustomization.yaml</code> file is added to the directory to make the manifest customizable by Kustomize.
+- A <code>configurations.yaml</code> file is added to configure the <a href="https://github.com/kubernetes-sigs/kustomize/blob/master/examples/transformerconfigs/README.md#name-reference-transformer">namereference</a> 
+Kustomize plugin which ensures <code>reference</code> fields are correctly set when pointing to resource names 
+that ArgoCD will modify using the Kustomize <a href="https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/nameprefix/">nameprefix</a>
+mechanism. The content of the file is sourced from this <a href="https://blog.scottlowe.org/2021/10/11/kustomize-transformer-configurations-for-cluster-api-v1beta1/">Scott Lowe blog article</a>.
+- All <code>namespace</code> properties in the cluster manifest are removed to allow Kustomize to override the
+namespace of all resources.</p>
+<p>If prep is successful, another invocation of <code>arlon basecluster validategit</code> should succeed as well.</p>
+<h2 id="workload-clusters">Workload clusters</h2>
+<h3 id="creation">Creation</h3>
+<p>Use <code>arlon cluster create</code> to create a next-gen workload cluster from a base cluster
+(<em>this is different from</em> <code>arlon cluster deploy</code> <em>for creating current-generation clusters</em>).
+The command creates between 2 and 3 (depending on whether a profile is used)
+ArgoCD application resources that together
+make up the cluster and its contents. The general usage is:</p>
+<pre><code>arlon cluster create --cluster-name &lt;clusterName&gt; --repo-url &lt;repoUrl&gt; --repo-path &lt;pathToDirectory&gt; [--output-yaml] [--profile &lt;profileName&gt;] [--repo-revision &lt;repoRevision&gt;]
+</code></pre>
+<p>The command supports two modes of operation:
+- With <code>--output-yaml</code>: output a list of YAML resources that you can inspect, save to a file, or pipe to <code>kubectl apply -f</code>
+- Without <code>--output-yaml</code>: create the application resources directly in the management cluster currently referenced by your KUBECONFIG and context.  </p>
+<p>The <code>--profile</code> flag is optional; a cluster can be created with no profile.</p>
+<h3 id="composition">Composition</h3>
+<p>A workload cluster is composed of 2 to 3 ArgoCD application resources, which are named
+based on the name of the base cluster and the workload cluster. For illustration purposes,
+the following discussion assumes that the base cluster is named <code>capi-quickstart</code>, the
+workload cluster is named <code>cluster-a</code>, and the optional profile is named <code>xxx</code>.</p>
+<h4 id="cluster-app">Cluster app</h4>
+<p>The <code>cluster-a</code> application is the <em>cluster app</em> for the cluster.
+It is responsible for deploying the base cluster resources, meaning the Cluster API manifests.
+It is named directly from the workload cluster name.</p>
+<p>The application's spec uses a ApplicationSourceKustomize that points to the base cluster's git
+directory. The spec ensures that all deployed resources are configured to:
+- Reside in the <code>cluster-a</code> namespace, which is deployed by the <em>arlon app</em> (see below).
+This achieved by setting <code>app.Spec.Destination.Namespace</code> to the workload cluster's name
+  (<em>this only works if the resources do not specify an explicit namespace; this requirement is
+taken care of by the "prep" step on the base cluster</em>).
+- Be named <code>cluster-a-capi-quickstart</code>, meaning the workload cluster name followed by the
+base cluster name. This is achieved by setting <code>app.Spec.Source.Kustomize.NamePrefix</code> to
+the workload cluster name plus a hyphen.</p>
+<h4 id="arlon-app">Arlon app</h4>
+<p>The <code>cluster-a-arlon</code> application is the <em>arlon app</em> for the cluster.
+It is resposible for deploying:
+- The <code>cluster-a</code> namespace, which holds most resources related to this workload cluster,
+such as the Cluster API manifests deployed by the cluster app.
+- Resources required to register the workload cluster with argocd when available:
+ClusterRegistration and associated RBAC rules.
+- Additional resources (service account, more RBAC rules) for Cluster Autoscaler if enabled.</p>
+<p>The application spec's ApplicationSource points to the existing Arlon Helm chart
+located here by default:
+- Repo: https://github.com/arlonproj/arlon.git
+- Revision: private/leb/gen2 (IMPORTANT: NEEDS TO CHANGE TO STABLE BRANCH OR TAG)
+- Path: pkg/cluster/manifests</p>
+<p>This is the same Helm chart that current-generation clusters are deployed from, using <code>arlon cluster deploy</code>.
+When used for the arlon app for a next-gen cluster, the Helm parameters are configured to only deploy
+the Arlon resources, with the subchart for cluster resources disabled, since those resources will
+be deployed by the cluster app.</p>
+<p><strong>Important issue</strong>: as described above, the application source resides in the public Arlon repo.
+To avoid breaking user's deployed clusters, the source must be stable and not change!
+- This probably means a particular Arlon release should point the source to a stable tag (not even a branch?)
+- As an alternative, during Arlon setup, allow the user to copy the Helm chart into a private repo,
+  and point the source there.</p>
+<h4 id="profile-app-optional">Profile app (optional)</h4>
+<p>A next-gen cluster can be assigned a current-gen dynamic profile, in which case Arlon creates
+a <em>profile app</em> named <code>&lt;clusterName&gt;-profile-&lt;profileName&gt;</code>, or <code>cluster-a-profile-xxx</code> in the running
+example.</p>
+<p>This is similar to the profile app created when attaching a profile app to an external cluster.
+The application source points to the git location of the dynamic profile.</p>
+<h3 id="teardown">Teardown</h3>
+<p>Since a next-gen cluster is composed of multiple ArgoCD applications, destroying the cluster
+requires deleting all of its applications. To facilitate this, the 2 or 3 applications created
+by <code>arlon cluster create</code> are automatically labeled with <code>arlon-cluster=&lt;clusterName&gt;</code>.</p>
+<p>The user has two options for destroying a next-gen cluster:
+- The easiest way: <code>arlon cluster delete &lt;clusterName&gt;</code>. This command automatically detects a next-gen
+cluster and cleans up all related applications.
+- A more manual way: <code>kubectl delete application -l arlon-cluster=&lt;clusterName&gt;</code></p>
+<h2 id="update-semantics">Update Semantics</h2>
+<p>A base cluster lives in git and is shared by all workload clusters created from it.
+This is sometimes referred to as <em>Linked Mode</em>.
+Any git update to the cluster can affect the associated workload clusters, therefore
+such updates must be planned and managed with care; there is a real risk of such an
+update breaking existing clusters. </p>
+<ul>
+<li>By default, a workload's cluster <em>cluster app</em> is configured with auto-sync, meaning ArgoCD will
+immediately apply any changes in the base cluster to the deployed Cluster API cluster resources.</li>
+<li>In general, a base cluster <strong>does not need to be "prepped" again</strong> after a modification to its main
+manifest file (the one containing the Cluster API resources). So the user is free to edit the manifest
+directly, commit/push the changes, and expect to see immediate changes to already-deployed clusters
+created from that base cluster.</li>
+</ul>
+<h3 id="unsupported-changes">Unsupported changes</h3>
+<p>The controllers for Cluster API and its providers disallow changes to some fields belonging
+to already-deployed resources.
+- For example, changing the base cluster name (<code>medata.Name</code> of the <code>Cluster</code> resource) will have disastrous consequences on already-deployed
+clusters, causing many resources to enter the OutOfSync state and never recover because ArgoCD
+fails to apply the changes (they are rejected by the controllers). Consequently, a user should never
+change the name of a base cluster.
+- Besides the cluster name, other fields cannot change (this has been observed anecdotally, we don't
+yet have an exhaustive list).
+- Changing the Kubernetes version of the control plane or data plane <em>is</em> supported, so long as the new version
+is supported by the relevant providers. If accepted, such a change will result in a rolling update
+of the corresponding plane.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
